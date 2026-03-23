@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netli
+  labels:
+    app: netli
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: netli
+    spec:
+      containers:
+      - name: netli
+        image: trainerbpl10/kbimg
+        ports:
+        - containerPort: 80
