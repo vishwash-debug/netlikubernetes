@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: netli
-        image: trainerbpl10/kbimg
+        image: IMAGE_PLACEHOLDER
         ports:
         - containerPort: 80
