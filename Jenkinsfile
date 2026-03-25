@@ -47,7 +47,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'aws-creds') {
                 sh 'aws eks --region us-east-1 update-kubeconfig --name netlicluster'
-                sh "sed -i 's|IMAGE_PLACEHOLDER|${IMAGE_NAME}:${IMAGE_TAG}|g' k8s/deployment.yml"
+                sh "sed -i 's|IMAGE_PLACEHOLDER|${IMAGE_NAME}:${IMAGE_TAG}|g' k8s/deployment.yaml"
                         sh "kubectl apply -f k8s/deployment.yaml"
                         sh "kubectl apply -f k8s/service.yml"
                 }   
