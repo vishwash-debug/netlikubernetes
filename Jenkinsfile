@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('CODE') {
       steps {
-        git url:"https://github.com/netlitrain/netlikubernetes.git", branch:"main"
+        git url:"https://github.com/vishwash-debug/netlikubernetes.git", branch:"main"
       }
     }
 
