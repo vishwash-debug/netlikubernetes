@@ -36,7 +36,7 @@ pipeline {
 
     stage('IMAGE_CHECK') {
       steps {
-        sh "trivy image --severity CRITICAL --exit-code 0 ${IMAGE_NAME}:${IMAGE_TAG}"
+        sh "trivy image --severity CRITICAL --exit-code 0 $IMAGE_NAME:$IMAGE_TAG"
       }
     }
 
