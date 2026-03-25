@@ -18,7 +18,7 @@ pipeline {
 
     stage('SonarQube Analysis') {
       steps {
-        withSonarQubeEnv('sonar') {
+        withSonarQubeEnv('Sonar') {
           sh """
             ${SONAR_HOME}/bin/sonar-scanner \
             -Dsonar.projectName=NETLIPROJ \
